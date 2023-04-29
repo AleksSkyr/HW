@@ -127,8 +127,8 @@ public class Main {
     }
     public static void tasc7() {
         System.out.println("Задача 7");
-        int one = 7;
-        int two = 2;
+        int one = 8;
+        int two = 5;
         int three = 17;
         if (one > two) {
             if (one > three) {
