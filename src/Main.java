@@ -1,3 +1,5 @@
+import java.util.Scanner;
+
 public class Main {
     public static void main(String[] args) {
 
@@ -6,7 +8,8 @@ public class Main {
         tasc3();
         tasc4();
         tasc5();
-//        tasc6();
+        tasc6();
+        tasc7();
 
 
     }
@@ -82,7 +85,58 @@ public class Main {
     }
 
     public static void tasc5() {
-        System.out.println("Задача 4");
+        System.out.println("Задача 5");
+
+        System.out.print("Введите ваш возраст: ");
+        Scanner in = new Scanner(System.in);
+        int age = in.nextInt();
+
+        System.out.println("Вы с родителями?");
+        boolean parents = in.nextBoolean();
+
+        if (age < 5) {
+            System.out.println("Если ребенку " + age + " года, то он не может кататься на аттракционе.");
+        } else if ((age >= 5 && age <= 14) && parents) {
+            System.out.println("Если ребенку " + age + " лет, то он может кататься только в сопровождении взрослого!");
+        } else if ((age >= 5 && age <= 14) && !parents) {
+            System.out.println("Если ребенку " + age + " лет Если взрослого нет, то кататься нельзя!");
+        } else if (age > 14) {
+            System.out.println("Если ребенок старше " + age + " лет, то он может кататься свободно один! ");
+
+        }
+    }
+
+    public static void tasc6() {
+        System.out.println("Задача 6");
+        int trainCapacity = 102;
+        int sitPlace = 60;
+        int remainingSeats = trainCapacity - sitPlace;
+        int placeBusy = 60;
+        int freePlace = 42;
+
+        if (placeBusy < sitPlace && freePlace < remainingSeats ) {
+            System.out.println("В вагоне есть " + (sitPlace - placeBusy) + " сидячих мест, и " + (remainingSeats - freePlace) + " стоячих мест");
+        }else if (sitPlace == 60 && remainingSeats <= 42) {
+            System.out.println("В вагоне есть " + (remainingSeats - freePlace) + " стоячих мест");
+        }else if (sitPlace >= 60 && remainingSeats >= 42) {
+            System.out.println("В вагоне есть " + (sitPlace - placeBusy) + " сидячих мест");
+        }else {
+            System.out.println("Вагон забит полностью");
+        }
+
+    }
+    public static void tasc7() {
+        System.out.println("Задача 7");
+        int one = 7;
+        int two = 2;
+        int three = 17;
+        if (one > two) {
+            if (one > three) {
+                System.out.println("Самое большое число: " +two);
+            }else if (three > one) {
+                System.out.println("Самое большое число: " + three);
+            }
+        }
 
     }
 }
